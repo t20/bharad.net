@@ -34,23 +34,10 @@
 		</script>
 		<link rel="stylesheet" media="screen" href="ie6.css"/>
     <![endif]-->
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/cufon-yui.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/fonts/Museo.font.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/DD_roundies.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/hoverIntent.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/superfish.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/s3Slider.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/custom.js"></script>
-	<?php if (is_page_template('template-home.php')) { ?>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#slider').s3Slider({
-				timeOut: 5000
-			});
-		});
-	</script>
-	<?php } ?>
 	
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
