@@ -15,6 +15,20 @@
 				'before_title' => '<h3>',
 				'after_title' => '</h3>',
 			));
+			register_sidebar(array(
+				'name' => 'Meetup Widget',
+				'before_widget' => '<div class="widget %2$s">',
+				'after_widget' => '</div>',
+				'before_title' => '<h3>',
+				'after_title' => '</h3>',
+			));
+			register_sidebar(array(
+				'name' => 'Meetups Widget',
+				'before_widget' => '<div class="widget %2$s">',
+				'after_widget' => '</div>',
+				'before_title' => '<h3>',
+				'after_title' => '</h3>',
+			));
 		}
 		
 	/* Un-Register WP-PageNavi Style Page Include */
