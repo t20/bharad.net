@@ -9,7 +9,7 @@ Template Name: Portfolio
 				<div class="portfolio">
 					<?php if (get_option('sf_portfolio_header') && get_option('sf_portfolio_text')) { ?>
 					<div class="title">
-						<h2><?php echo stripslashes(get_option('sf_portfolio_header')); ?></h2>
+						<h2><a href="/projects"><?php echo stripslashes(get_option('sf_portfolio_header')); ?></a></h2>
 						<p><?php echo stripslashes(get_option('sf_portfolio_text')); ?></p>
 					</div>
 					<?php } ?>
@@ -39,19 +39,26 @@ Template Name: Portfolio
 						$wp_query= null;
 						$wp_query = new WP_Query();
 						$wp_query->query('showposts='.$ppp.'&cat='.$category.'&paged='.$paged);
-						$limit_text = (get_option('sf_portfolio_limittext')) ? get_option('sf_portfolio_limittext') : 200;
+						$limit_text = (get_option('sf_portfolio_limittext')) ? get_option('sf_portfolio_limittext') : 220;
+						$count = 0;
 						while ($wp_query->have_posts()) : $wp_query->the_post();
 							$do_not_duplicate = $post->ID; 
 							$thumb = get_post_meta($post->ID, 'thumb-small', true);
+							if ($count % 3 == 0)
+                                $position_class = "item_left";
+                            else if ($count % 3 == 1)
+                                $position_class = "item_center";
+                            else $position_class = "item_right";
 							if (empty($thumb)) { continue; }
 							else { ?>
-							<div class="item">
+							<div class="item <?php echo $position_class; ?>" >
 								<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb; ?>" alt="<?php the_title() ?>" /></a>
 								<h2><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
 								<p><?php the_content_limit($limit_text, ''); ?></p>
 							</div>
 							
-							<?php } 
+							<?php }
+							$count++;
 						endwhile; 
 					?>
 					</div>
@@ -61,8 +68,8 @@ Template Name: Portfolio
 					else { 
 					?>
 					<div class="navigation">
-						<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-						<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+						<div class="alignleft"><?php next_posts_link('&laquo; Older projects') ?></div>
+						<div class="alignright"><?php previous_posts_link('Newer Projects &raquo;') ?></div>
 					</div>
 					<?php } ?>
 					
