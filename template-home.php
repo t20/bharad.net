@@ -29,7 +29,5 @@ Template Name: Home
 					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home Widget') ) : ?>
 					<?php endif; ?>
 				</div>
-			
-
 
 <?php get_footer(); ?>
