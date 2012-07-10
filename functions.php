@@ -208,4 +208,12 @@
 			register_sidebar_widget('RSS Feed Subscribe', 'sf_rss_widget');
 		}
 		add_action('widgets_init','sf_widgets');
+		
+    // add_theme_support( 'menus' );
+		
+		add_action('init', 'register_custom_menu');
+
+    function register_custom_menu() {
+    register_nav_menu('custom_menu', __('Custom Menu'));
+    }
 ?>
