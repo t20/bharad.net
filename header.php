@@ -59,11 +59,12 @@
 
 	<div id="wrapper">
 		<div id="header">
-			<div id="logo"><a href="<?php bloginfo('home'); ?>"><img src="<?php echo sf_get_logo(); ?>" alt="<?php bloginfo('name'); ?> - <?php bloginfo('description') ?>"/></a></div>
+			<div id="logo">
+			  <a href="<?php bloginfo('home'); ?>">
+			  <h2><?php bloginfo('name'); ?></h2>
+        </a></div>
 			<div id="pagenav">
-				<ul class="sf-menu" id="nav">
-					<?php wp_list_pages('title_li='); ?>
-				</ul>
+        <?php wp_nav_menu(array('menu' => 'custom_menu')); ?>
 			</div>
 		</div>
 		<div id="main">
