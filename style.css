@@ -11,7 +11,7 @@ Author URI: http://www.omarcorrales.com
 @import url("reset.css");
 
 	body {
-		background: #e7e7e2 url(images/main_bg.png) top left repeat-x;
+		background-color: #f4f4f4;
 		font-family: 'Lucida Grande',Verdana,'Bitstream Vera Sans',Arial,sans-serif; 
 		font-size:14px;
 		line-height:22px;
@@ -53,7 +53,7 @@ Author URI: http://www.omarcorrales.com
 		margin-bottom:20px;
 		padding:0 10px;
 		width:940px;
-		display:block;
+		height:70px;
 	}
 		#header #logo {
 			float:left;
@@ -151,7 +151,17 @@ Author URI: http://www.omarcorrales.com
 					height: 290px;
 				}
 
+            #main .container #headshot {
+                float:left;
+                width:220px;
+                height:260px;
+                background: transparent url(images/me.jpg) no-repeat;
+                margin:20px 40px;
+            }
+
 			#main .container .slogan {
+			    float:right;
+			    width:600px;
 				margin-bottom:20px;
 				padding:10px 0 30px;
 				border-bottom:1px solid #e3e3e3;
@@ -174,24 +184,37 @@ Author URI: http://www.omarcorrales.com
 				#main .container .slogan h2 {
 					font-size:28px;
 					color:#4a85a0;
+					margin:14px 0;
 				}
-				
+			#main .container .slogan ul {
+			    margin:20px 0 0 0;
+			    padding:0 60px;
+			}
+			#main .container .slogan ul li {
+			    display:inline;
+			    background:#f3f3f3;
+			    padding:5px 24px;
+			    margin-right:20px;
+			    background:#f6f6f6 url("images/arrow5.png") no-repeat center right;
+			}
+			
 			#main .container .home_widgets {
 				overflow:hidden;
 				font-size:12px;
 				line-height:22px;
 				color:#8b8c8c;
+				margin:20px 0;
 			}
 				#main .container .home_widgets .widget {
-					margin-left:30px;
-					width:280px;
+					margin:0 15px;
+					width:270px;
 					float:left;
 				}
 				#main .container .home_widgets .widget h3{
 					padding:15px 10px;
 					padding-top:0;
 					margin-bottom:15px;
-					font-size:24px;
+					font-size:20px;
 					color:#4a85a0;
 					border-bottom:1px solid #e3e3e3;
 				}
@@ -218,26 +241,29 @@ Author URI: http://www.omarcorrales.com
 					#main .container .portfolio .title h2 {
 						color:#5c96b0;
 						font-size:30px;
+						margin-bottom:20px;
 					}
-				#main .container .portfolio .portfnav {
+				#main .portfnav {
 					font-size:11px;
 					color:#929292;
 					padding:10px 20px;
 					border-bottom:1px solid #e3e3e3;
 					overflow:hidden;
 				}
-					#main .container .portfolio .portfnav ul {
+					#main .portfnav ul {
 						overflow:hidden;
 					}
-					#main .container .portfolio .portfnav ul li {
+					#main .portfnav ul li {
 						display:inline;
 						margin-right:5px;
+						padding:0px;
+						background:none;
 					}
-						#main .container .portfolio .portfnav ul li a {
+						#main .portfnav ul li a {
 							padding:5px 10px!important;
 							padding:0px 10px;
 						}
-						#main .container .portfolio .portfnav ul li.active a,#main .container .portfolio .portfnav ul li a:hover {
+						#main .portfnav ul li.active a, #main .portfnav ul li a:hover {
 							background:#e6e6e6;
 							color:#4c4c4c;
 						}
@@ -247,10 +273,20 @@ Author URI: http://www.omarcorrales.com
 					margin-top:30px;
 				}
 					#main .container .portfolio #folio .item {
-						width:400px;
+						width:280px;
 						float:left;
 						margin-bottom:40px;
-						padding:0 25px;
+						height:300px;
+					}
+					
+					.item_left {
+					    padding-right:15px;
+					}
+					.item_right {
+					    padding-left:15px;
+					}
+					.item_center {
+					    padding: 0 15px;
 					}
 						#main .container .portfolio #folio .item img {
 							border:1px solid #dddddd;
@@ -261,6 +297,7 @@ Author URI: http://www.omarcorrales.com
 						#main .container .portfolio #folio .item h2 {
 							font-size:18px;
 							margin-bottom:10px;
+							text-align:center;
 						}
 						#main .container .portfolio #folio .item p {
 							font-size:12px;
@@ -274,7 +311,7 @@ Author URI: http://www.omarcorrales.com
 				float:left;
 			}
 				#main .container .content .title {
-					font-size:30px;
+					font-size:24px;
 					color:#5c96b0;
 					margin-bottom:15px;
 				}
@@ -331,7 +368,7 @@ Author URI: http://www.omarcorrales.com
 						margin-bottom:5px;
 					}
 					#main .container .content form input,#main .container .content form textarea,#main .container .content form select {
-						background-color:#e7e7e2;
+						background-color:#F4F4F4;
 						border:1px solid #ccccba;
 						padding:5px;
 						color:#333333
@@ -361,14 +398,12 @@ Author URI: http://www.omarcorrales.com
 						#main .container .content .blogpost h2.title {
 							margin:0;
 							padding:0;
-							margin-left:45px
 						}
 							#main .container .content .blogpost h2 a{
 								text-decoration:none;
 							}
 						#main .container .content .blogpost .meta {
 							font-size:12px;
-							margin-left:45px
 						}
 						#main .container .content .blogpost .entry {
 							clear:both;
@@ -618,13 +653,13 @@ Author URI: http://www.omarcorrales.com
 					
 					}
 						#main .container .sidebar .widget_search form div {
-							background:#e7e7e2;
+							background:#F4F4F4;
 							border:1px solid #cbcbc9;
 							padding:5px;
 						}
 							#main .container .sidebar .widget_search form div input {
 								border:0;
-								background:#e7e7e2;
+								background:#F4F4F4;
 								color:#666666;
 								padding:5px;
 							}
@@ -638,16 +673,21 @@ Author URI: http://www.omarcorrales.com
 								}
 					
 	#footer {
-		font-size:12px;
+		font-size:11px;
 		padding:20px;
 		clear:both;
 		overflow:hidden;
 	}
+		#footer .footernav{
+            width:60%;
+		}
 		#footer .footernav, #footer .copyright {
 			float:left;
-			width:49%;
 			display:inline;
 		}
+		#footer .copyright {
+		    width:38%;
+	    }
 			#footer .footernav ul {
 				overflow:hidden;
 			}
@@ -720,3 +760,74 @@ Author URI: http://www.omarcorrales.com
 		margin: 2px;	
 		color: #000000;
 	}
+
+/*Added for resume*/
+
+.sector {
+	border-bottom-width: 1px;
+	border-bottom-color: #cccccc;
+	border-bottom-style: solid;
+	padding:10px;
+	color: #333333;
+}
+
+#namead {
+	width: 300px;
+	float: left;
+}
+
+#contact {
+	float: right;
+	width: 330px;
+}
+
+.clear {
+clear:both;
+}
+
+.exp {
+	margin:20px 0 0 20px;
+	color:#000;
+	background:transparent url(images/arrow2.png) no-repeat ;
+	padding-left:30px;
+}
+
+.exp span{
+    font-weight:bold;
+}
+
+.subexp {
+	margin-left: 70px;
+}
+
+.tablerow {
+	font-weight: bold;
+	background-color: #cccccc;
+}
+
+tr td {
+	padding:6px 5px 6px 6px;
+	border-color: #e6e6e6;
+	border-style: solid;
+	border-width: 1px;
+}
+
+#education .tablerow {
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 5px 5px;
+}
+
+#pdf {
+    width:150px;
+    margin:0 auto;
+}
+
+#pdf p a{
+    background:#f3f3f3;
+    padding:8px 24px;
+    text-decoration:none !important;
+}
